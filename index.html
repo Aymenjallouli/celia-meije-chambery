@@ -1,0 +1,924 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Célia Meije, professeure de yoga à Chambéry</title>
+<meta name="description" content="Célia Meije, professeure de yoga à Chambéry : Yoga Vinyasa, Yin Yoga et yoga prénatal. Noté 5,0 sur Google. Contact au 06 67 34 37 43.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Célia Meije, professeure de yoga à Chambéry">
+<meta property="og:description" content="Vinyasa, Yin Yoga et yoga prénatal à Chambéry. Une bulle hors du temps, chaque semaine. 5,0 sur Google, 15 avis.">
+<meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#9A432C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%239A432C'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='30' fill='%23FFF8F0'%3ECM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Figtree:wght@400;600&display=swap">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  "name": "Célia Meije",
+  "description": "Professeure de yoga à Chambéry : Yoga Vinyasa, Yin Yoga et yoga prénatal.",
+  "image": "assets/photos/photo-01.jpg",
+  "telephone": "+33667343743",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "150 Fbg Montmélian",
+    "postalCode": "73000",
+    "addressLocality": "Chambéry",
+    "addressCountry": "FR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 45.566133, "longitude": 5.9278711 },
+  "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJa52dz4upi0cR1ZB2mP7RVms",
+  "sameAs": ["https://www.instagram.com/celiameije/"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Cours de yoga",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Yoga Vinyasa" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Yin Yoga" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Yoga prénatal" } }
+    ]
+  }
+}
+</script>
+
+<style>
+/*
+  DESIGN DECISIONS · Célia Meije, professeure de yoga, Chambéry
+  ----------------------------------------------------------------
+  Palette, pulled from her own photos: paper cream + pine sand from the raw-wood studio walls;
+  terracotta (#9A432C) from the floral blouse she teaches in (brand, CTAs, theme-color);
+  deep wine (#4A1F24) from the yin bolster, used once as the strong colour move (reviews);
+  apricot (#E7A77F) as a warm "sun" accent on dark grounds and for the hero disc.
+  No blue, no showy gradients: warm, grounded, calm, like the room.
+  Type: Instrument Serif (roman + italic) for display, soft and editorial, a voice that "apaise";
+  Figtree 400/600 for text, round and legible at 17px on a phone.
+  Hero: split editorial. Her name set huge on two lines (Célia / Meije in italic), the reviews'
+  own words "une bulle hors du temps" as the promise, a framed portrait with a terracotta sun
+  disc drawn in CSS and a slowly turning badge listing her three styles.
+  Rhythm: paper hero > wine proof > paper courses (asymmetric rows + one terracotta colour
+  field) > one oversized full-bleed mountain moment > sand approach collage > paper map >
+  terracotta contact > espresso footer. The circle ("la bulle", the breath) is the only motif.
+*/
+:root {
+  --bg: #F7F1E8;
+  --surface: #EFE4D3;
+  --ink: #2B1F1A;
+  --ink-soft: #64544A;
+  --brand: #9A432C;
+  --brand-deep: #7E3522;
+  --brand-ink: #FFF8F0;
+  --accent: #E7A77F;
+  --line: #E0D2BF;
+  --deep: #4A1F24;
+  --deep-ink: #F7F1E8;
+  --deep-soft: #D9B9A0;
+  --deep-surface: rgba(255, 248, 240, .06);
+  --deep-line: rgba(247, 241, 232, .18);
+  --scrim: rgba(28, 19, 14, .78);
+
+  --font-serif: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+  --font-sans: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --step--1: clamp(.875rem, .85rem + .12vw, .9375rem);
+  --step-0: clamp(1.0625rem, 1rem + .3vw, 1.1875rem);
+  --step-1: clamp(1.25rem, 1.12rem + .55vw, 1.5rem);
+  --step-2: clamp(1.5rem, 1.25rem + 1.1vw, 2.125rem);
+  --step-3: clamp(2rem, 1.55rem + 2vw, 3.25rem);
+  --step-4: clamp(2.5rem, 1.8rem + 3.4vw, 4.75rem);
+  --step-5: clamp(4.25rem, 2.6rem + 7.6vw, 9rem);
+
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 24px;
+  --space-6: 32px; --space-7: 48px; --space-8: 64px; --space-9: 96px;
+  --section-pad: clamp(56px, 10vw, 128px);
+
+  --r-s: 10px; --r-m: 20px; --r-pill: 999px;
+  --shadow-1: 0 1px 2px rgba(43, 31, 26, .06), 0 2px 8px rgba(43, 31, 26, .06);
+  --shadow-2: 0 2px 4px rgba(43, 31, 26, .05), 0 14px 32px -10px rgba(43, 31, 26, .22);
+  --shadow-3: 0 4px 10px rgba(43, 31, 26, .06), 0 36px 70px -24px rgba(43, 31, 26, .42);
+
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --container: 1200px;
+  --gutter: clamp(16px, 5vw, 40px);
+  --header-h: 64px;
+  --bar-h: 64px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+html:focus-within { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--font-sans); font-size: var(--step-0); line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: calc(var(--bar-h) + env(safe-area-inset-bottom));
+}
+body.no-scroll { overflow: hidden; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--font-serif); font-weight: 400; line-height: 1.05; letter-spacing: -.01em; margin: 0; text-wrap: balance; }
+p, blockquote, figure, address { margin: 0; }
+p { text-wrap: pretty; }
+em { font-style: italic; }
+ul { margin: 0; padding: 0; list-style: none; }
+[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
+svg.i { width: 20px; height: 20px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+
+:focus-visible { outline: 2.5px solid var(--brand); outline-offset: 3px; border-radius: 4px; }
+.proof :focus-visible, .band :focus-visible, .cta :focus-visible, .site-footer :focus-visible, .action-bar :focus-visible, .lightbox :focus-visible { outline-color: var(--accent); }
+
+.container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
+.section { padding-block: var(--section-pad); }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+.skip {
+  position: absolute; left: var(--space-4); top: -100px; z-index: 100;
+  background: var(--ink); color: var(--bg); padding: var(--space-3) var(--space-4); border-radius: var(--r-s);
+}
+.skip:focus { top: var(--space-3); }
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: var(--step--1); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--brand);
+}
+.eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.eyebrow--light { color: var(--accent); }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 52px; padding: 0 22px; border-radius: var(--r-pill); border: 1.5px solid transparent;
+  font: 600 1rem/1.1 var(--font-sans); text-decoration: none; text-align: center; cursor: pointer;
+  transition: transform .25s var(--ease), background-color .25s var(--ease), color .25s var(--ease);
+}
+.btn:active { transform: translateY(1px) scale(.99); }
+.btn--brand { background: var(--brand); color: var(--brand-ink); box-shadow: var(--shadow-1); }
+.btn--brand:hover { background: var(--brand-deep); }
+.btn--ghost { border-color: var(--ink); color: var(--ink); }
+.btn--ghost:hover { background: var(--ink); color: var(--bg); }
+.btn--light { background: var(--bg); color: var(--ink); }
+.btn--light:hover { background: var(--accent); }
+
+.link-arrow {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px;
+  font-weight: 600; color: var(--brand); text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 5px;
+}
+.link-arrow svg { transition: transform .3s var(--ease); }
+.link-arrow:hover svg { transform: translateX(4px); }
+
+/* Reveal */
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.js .reveal.is-in { opacity: 1; transform: none; }
+.js .reveal-d1 { transition-delay: .1s; }
+.js .reveal-d2 { transition-delay: .2s; }
+
+/* ---------- Header ---------- */
+.site-header { position: sticky; top: 0; z-index: 50; background: var(--bg); border-bottom: 1px solid transparent; transition: border-color .3s var(--ease); }
+.site-header.is-scrolled { border-bottom-color: var(--line); }
+.header-inner { height: var(--header-h); display: flex; align-items: center; gap: var(--space-4); }
+.wordmark { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; margin-right: auto; text-decoration: none; font-family: var(--font-serif); font-size: 1.5rem; line-height: 1; letter-spacing: -.01em; }
+.mono { width: 36px; height: 36px; border-radius: 50%; background: var(--brand); color: var(--brand-ink); display: grid; place-items: center; font-style: italic; font-size: 1.05rem; letter-spacing: 0; }
+.header-cta { display: none; min-height: 44px; padding: 0 18px; }
+.menu-btn {
+  width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid var(--line); background: transparent; color: var(--ink);
+  display: grid; place-items: center; cursor: pointer; padding: 0;
+}
+.menu-btn span { display: block; width: 18px; height: 1.75px; background: currentColor; border-radius: 2px; transition: transform .35s var(--ease); grid-area: 1 / 1; }
+.menu-btn span:first-child { transform: translateY(-4px); }
+.menu-btn span:last-child { transform: translateY(4px); }
+.is-open .menu-btn span:first-child { transform: rotate(45deg); }
+.is-open .menu-btn span:last-child { transform: rotate(-45deg); }
+
+.nav {
+  position: fixed; left: 0; right: 0; top: var(--header-h); bottom: 0; z-index: 49;
+  background: var(--bg); padding: var(--space-6) var(--gutter) calc(var(--space-6) + env(safe-area-inset-bottom));
+  display: flex; flex-direction: column; justify-content: space-between; gap: var(--space-7); overflow-y: auto;
+  opacity: 0; visibility: hidden; transform: translateY(-10px);
+  transition: opacity .35s var(--ease), transform .35s var(--ease), visibility 0s linear .35s;
+}
+.is-open .nav { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+.nav ul { display: grid; }
+.nav-link {
+  display: flex; align-items: baseline; gap: var(--space-4); min-height: 56px; padding-block: var(--space-2);
+  font-family: var(--font-serif); font-size: var(--step-3); line-height: 1.1; text-decoration: none; border-bottom: 1px solid var(--line);
+}
+.nav-link small { font: 600 var(--step--1)/1 var(--font-sans); color: var(--brand); letter-spacing: .08em; }
+.nav-foot { display: grid; gap: var(--space-3); }
+
+/* ---------- Hero ---------- */
+.hero { padding-block: var(--space-5) var(--section-pad); overflow: hidden; overflow: clip; }
+.hero-grid { display: grid; gap: var(--space-8); align-items: center; }
+.hero-title { font-size: var(--step-5); line-height: .9; letter-spacing: -.03em; margin-top: var(--space-4); }
+.hero-title span { display: block; }
+.hero-title em { display: block; padding-left: .42em; color: var(--brand); }
+.hero-promise { font-family: var(--font-serif); font-style: italic; font-size: var(--step-2); line-height: 1.15; margin-top: var(--space-5); }
+.hero-sub { margin-top: var(--space-3); color: var(--ink-soft); max-width: 44ch; }
+.rating-chip {
+  display: inline-flex; align-items: center; gap: 10px; margin-top: var(--space-5); min-height: 44px; padding: 6px 16px 6px 12px;
+  border-radius: var(--r-pill); background: var(--surface); text-decoration: none; font-size: var(--step--1); font-weight: 600;
+  transition: background-color .25s var(--ease);
+}
+.rating-chip:hover { background: var(--line); }
+.stars { display: inline-flex; gap: 2px; color: var(--brand); }
+.stars svg { width: 15px; height: 15px; fill: currentColor; }
+.rating-chip .sep { color: var(--ink-soft); font-weight: 400; }
+.hero-actions { display: grid; gap: var(--space-3); margin-top: var(--space-5); }
+
+.hero-media { position: relative; isolation: isolate; margin-inline: var(--space-2) var(--space-5); }
+.hero-sun { position: absolute; z-index: -1; width: 58%; aspect-ratio: 1; border-radius: 50%; background: var(--accent); top: -9%; right: -16%; }
+.hero-frame { aspect-ratio: 4 / 5; border-radius: var(--r-m); overflow: hidden; background: var(--surface); box-shadow: var(--shadow-3); }
+.hero-frame img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; animation: kenburns 26s var(--ease) infinite alternate; transform-origin: 50% 40%; }
+@keyframes kenburns { from { transform: scale(1.02); } to { transform: scale(1.1); } }
+.badge {
+  position: absolute; left: -14px; bottom: -34px; width: 112px; height: 112px; border-radius: 50%;
+  background: var(--bg); color: var(--ink); box-shadow: var(--shadow-2); display: grid; place-items: center;
+}
+.badge svg { grid-area: 1 / 1; width: 100%; height: 100%; animation: spin 48s linear infinite; }
+.badge text { font: 600 10px var(--font-sans); letter-spacing: .12em; fill: currentColor; }
+.badge-dot { grid-area: 1 / 1; width: 26px; height: 26px; border-radius: 50%; background: var(--brand); }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---------- Proof ---------- */
+.proof { background: var(--deep); color: var(--deep-ink); }
+.proof-head { display: grid; gap: var(--space-6); }
+.proof h2 { font-size: var(--step-3); max-width: 18ch; margin-top: var(--space-4); }
+.proof h2 em { color: var(--accent); }
+.score { display: grid; justify-items: start; gap: var(--space-2); }
+.score-row { display: flex; align-items: center; gap: var(--space-4); }
+.score-num { font-family: var(--font-serif); font-size: var(--step-5); line-height: .85; letter-spacing: -.03em; }
+.score .stars { color: var(--accent); }
+.score .stars svg { width: 20px; height: 20px; }
+.score-count { color: var(--deep-soft); font-size: var(--step--1); margin-top: 4px; }
+.score-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 600; text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 1.5px; text-underline-offset: 5px; }
+
+.feature-quote { margin-top: var(--space-8); padding-top: var(--space-7); border-top: 1px solid var(--deep-line); }
+.feature-quote p { font-family: var(--font-serif); font-size: var(--step-4); line-height: 1.04; letter-spacing: -.015em; max-width: 21ch; text-wrap: balance; }
+.feature-quote mark { background: none; color: var(--accent); font-style: italic; }
+.feature-quote footer { margin-top: var(--space-5); display: flex; align-items: center; gap: var(--space-3); color: var(--deep-soft); font-size: var(--step--1); }
+.feature-quote footer .stars { color: var(--accent); }
+
+.rail-wrap { margin-top: var(--space-8); }
+.rail-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); margin-bottom: var(--space-5); }
+.rail-top h3 { font-family: var(--font-sans); font-size: var(--step--1); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--deep-soft); }
+.rail-btns { display: flex; gap: var(--space-2); }
+.rail-btn { width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid var(--deep-line); background: transparent; color: var(--deep-ink); display: grid; place-items: center; cursor: pointer; transition: background-color .25s var(--ease), opacity .25s var(--ease); }
+.rail-btn:hover { background: var(--deep-surface); }
+.rail-btn[disabled] { opacity: .35; cursor: default; }
+.rail {
+  display: grid; grid-auto-flow: column; grid-auto-columns: 86%; gap: var(--space-4);
+  overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: none;
+  padding-bottom: var(--space-2); border-radius: var(--r-m);
+}
+.rail::-webkit-scrollbar { display: none; }
+.review {
+  scroll-snap-align: start; display: flex; flex-direction: column; gap: var(--space-4);
+  padding: var(--space-6) var(--space-5); border-radius: var(--r-m); background: var(--deep-surface); border: 1px solid var(--deep-line);
+}
+.review .stars { color: var(--accent); }
+.review-text { font-size: 1.0625rem; line-height: 1.6; flex: 1; }
+.review-meta { display: flex; flex-direction: column; gap: 2px; padding-top: var(--space-4); border-top: 1px solid var(--deep-line); font-size: var(--step--1); }
+.review-author { font-weight: 600; }
+.review-date { color: var(--deep-soft); }
+
+/* ---------- Courses ---------- */
+.section-head { display: grid; gap: var(--space-4); max-width: 760px; }
+.section-head h2 { font-size: var(--step-4); }
+.section-lede { color: var(--ink-soft); max-width: 56ch; }
+.courses-list { display: grid; gap: var(--space-9); margin-top: var(--space-8); }
+.course { display: grid; gap: var(--space-6); align-items: center; }
+.course-media { border-radius: var(--r-m); overflow: hidden; aspect-ratio: 4 / 3; background: var(--surface); box-shadow: var(--shadow-2); }
+.course-media img { width: 100%; height: 100%; object-fit: cover; }
+.course-body { display: grid; gap: var(--space-3); justify-items: start; }
+.course-num { font-family: var(--font-serif); font-style: italic; font-size: var(--step-3); line-height: 1; color: var(--brand); }
+.course h3 { font-size: var(--step-3); }
+.course-tag { font-size: var(--step--1); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); }
+.course-text { max-width: 46ch; }
+.mini-quote { margin-top: var(--space-2); padding-left: var(--space-4); border-left: 2px solid var(--accent); font-family: var(--font-serif); font-style: italic; font-size: var(--step-1); line-height: 1.3; max-width: 36ch; }
+.mini-quote cite { display: block; margin-top: var(--space-2); font: 400 var(--step--1)/1.4 var(--font-sans); color: var(--ink-soft); }
+
+.course--panel {
+  position: relative; overflow: hidden; isolation: isolate; border-radius: var(--r-m);
+  background: var(--brand); color: var(--brand-ink); padding: var(--space-7) var(--space-5) 220px;
+}
+.course--panel .course-num, .course--panel .course-tag { color: var(--brand-ink); }
+.course--panel .course-tag { opacity: .85; }
+.course--panel .link-arrow { color: var(--brand-ink); }
+.ripples { position: absolute; z-index: -1; width: 400px; height: 400px; right: -90px; bottom: -170px; color: var(--accent); }
+.ripples circle { fill: none; stroke: currentColor; stroke-width: 1.25; opacity: .55; }
+.ripples .core { fill: var(--accent); stroke: none; opacity: .9; transform-origin: 200px 200px; animation: breathe 6s ease-in-out infinite alternate; }
+@keyframes breathe { from { transform: scale(.82); } to { transform: scale(1.08); } }
+
+/* ---------- Band (oversized moment) ---------- */
+.band { background: var(--ink); color: var(--deep-ink); display: grid; }
+.band-media { aspect-ratio: 1 / 1; overflow: hidden; }
+.band-media img { width: 100%; height: 100%; object-fit: cover; object-position: 66% 40%; }
+.band-copy { padding-block: var(--space-7) var(--section-pad); display: grid; gap: var(--space-5); justify-items: start; }
+.band-quote p { font-family: var(--font-serif); font-style: italic; font-size: var(--step-3); line-height: 1.08; letter-spacing: -.01em; max-width: 17ch; }
+.band-quote footer { margin-top: var(--space-4); color: var(--deep-soft); font-size: var(--step--1); }
+
+/* ---------- Approach ---------- */
+.approach { background: var(--surface); }
+.approach-grid { display: grid; gap: var(--space-8); align-items: center; }
+.approach-copy { display: grid; gap: var(--space-4); }
+.approach-copy h2 { font-size: var(--step-4); margin-bottom: var(--space-2); }
+.approach-copy p { max-width: 50ch; }
+.approach-copy p + p { color: var(--ink-soft); }
+.collage { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); align-items: start; }
+.collage-item {
+  position: relative; display: block; width: 100%; padding: 0; border: 0; border-radius: var(--r-m); overflow: hidden;
+  background: var(--line); cursor: zoom-in; box-shadow: var(--shadow-1);
+}
+.collage-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s var(--ease); }
+.collage-item:hover img { transform: scale(1.04); }
+.collage-item .zoom {
+  position: absolute; right: 10px; bottom: 10px; width: 36px; height: 36px; border-radius: 50%;
+  background: var(--bg); color: var(--ink); display: grid; place-items: center; box-shadow: var(--shadow-1);
+}
+.collage-item .zoom svg { width: 16px; height: 16px; }
+.c1 { aspect-ratio: 1 / 1; }
+.c1 img { object-position: 50% 92%; }
+.c2 { aspect-ratio: 1 / 1; margin-top: var(--space-7); }
+.c2 img { object-position: 50% 100%; }
+.c3 { grid-column: 1 / -1; aspect-ratio: 16 / 10; }
+.c3 img { object-position: 58% 50%; }
+
+/* ---------- Visit ---------- */
+.visit-grid { display: grid; gap: var(--space-7); }
+.visit-copy { display: grid; gap: var(--space-4); justify-items: start; align-content: start; }
+.visit-copy h2 { font-size: var(--step-4); }
+.visit address { font-style: normal; font-size: var(--step-1); line-height: 1.45; padding-left: var(--space-4); border-left: 2px solid var(--brand); }
+.visit-note { color: var(--ink-soft); max-width: 46ch; }
+.visit-actions { display: grid; gap: var(--space-3); margin-top: var(--space-2); width: 100%; }
+.map {
+  position: relative; border-radius: var(--r-m); overflow: hidden; background: var(--surface); box-shadow: var(--shadow-2);
+  aspect-ratio: 4 / 5; min-height: 320px;
+}
+.map-fallback { position: absolute; inset: 0; display: grid; place-content: center; gap: var(--space-2); text-align: center; padding: var(--space-5); color: var(--ink-soft); }
+.map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* ---------- Contact CTA ---------- */
+.cta { background: var(--brand); color: var(--brand-ink); }
+.cta-inner { display: grid; gap: var(--space-7); }
+.cta h2 { font-size: var(--step-4); max-width: 16ch; margin-top: var(--space-4); }
+.cta .eyebrow { color: var(--brand-ink); }
+.cta-list { border-top: 1px solid rgba(255, 248, 240, .3); }
+.cta-line {
+  display: grid; grid-template-columns: 1fr auto; align-items: center; gap: var(--space-2) var(--space-4);
+  padding-block: var(--space-5); border-bottom: 1px solid rgba(255, 248, 240, .3); text-decoration: none; min-height: 72px;
+}
+.cta-label { grid-column: 1; font-size: var(--step--1); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; opacity: .85; }
+.cta-value { grid-column: 1; font-family: var(--font-serif); font-size: var(--step-3); line-height: 1.05; }
+.cta-arrow { grid-column: 2; grid-row: 1 / span 2; width: 52px; height: 52px; border-radius: 50%; border: 1.5px solid rgba(255, 248, 240, .5); display: grid; place-items: center; transition: transform .35s var(--ease), background-color .35s var(--ease); }
+.cta-line:hover .cta-arrow { transform: rotate(-45deg); background: var(--brand-ink); color: var(--brand); }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--ink); color: var(--deep-ink); padding-block: var(--space-8) var(--space-6); }
+.footer-grid { display: grid; gap: var(--space-7); }
+.site-footer .wordmark { font-size: 1.75rem; }
+.footer-about { color: var(--deep-soft); margin-top: var(--space-4); max-width: 36ch; }
+.footer-title { font-size: var(--step--1); font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--deep-soft); margin-bottom: var(--space-3); }
+.footer-links a { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; min-width: 44px; text-decoration: none; }
+.footer-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.site-footer address { font-style: normal; line-height: 1.6; }
+.footer-bottom { margin-top: var(--space-8); padding-top: var(--space-5); border-top: 1px solid var(--deep-line); color: var(--deep-soft); font-size: var(--step--1); display: flex; flex-wrap: wrap; gap: var(--space-3); justify-content: space-between; }
+.footer-bottom a { display: inline-flex; align-items: center; min-height: 44px; }
+
+/* ---------- Mobile action bar ---------- */
+.action-bar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+  background: var(--deep-line); padding-bottom: env(safe-area-inset-bottom); box-shadow: 0 -8px 24px -12px rgba(43, 31, 26, .4);
+}
+.action-bar a {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+  min-height: var(--bar-h); background: var(--ink); color: var(--deep-ink); text-decoration: none; font-size: .875rem; font-weight: 600;
+}
+.action-bar a:first-child { background: var(--brand); color: var(--brand-ink); }
+
+/* ---------- Lightbox ---------- */
+.lightbox {
+  width: 100%; max-width: 100%; height: 100%; max-height: 100%; margin: 0; padding: var(--space-8) var(--space-4) var(--space-7);
+  border: 0; background: transparent; color: var(--deep-ink);
+}
+.lightbox[open] { display: grid; place-items: center; }
+.lightbox::backdrop { background: rgba(28, 19, 14, .96); }
+.lightbox figure { display: grid; gap: var(--space-3); justify-items: center; max-width: 1100px; }
+.lightbox img { max-height: calc(100dvh - 180px); width: auto; border-radius: var(--r-s); animation: lb-in .4s var(--ease); }
+@keyframes lb-in { from { opacity: 0; transform: scale(.97); } to { opacity: 1; transform: none; } }
+.lightbox figcaption { font-size: var(--step--1); color: var(--deep-soft); text-align: center; max-width: 60ch; }
+.lb-btn { position: fixed; width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid var(--deep-line); background: rgba(28, 19, 14, .6); color: var(--deep-ink); display: grid; place-items: center; cursor: pointer; }
+.lb-close { top: var(--space-4); right: var(--space-4); }
+.lb-prev { left: var(--space-4); bottom: var(--space-4); }
+.lb-next { right: var(--space-4); bottom: var(--space-4); }
+
+/* ---------- Breakpoints ---------- */
+@media (min-width: 360px) {
+  .hero-actions { grid-template-columns: 1fr 1fr; }
+  .hero-actions .btn { padding: 0 14px; }
+}
+@media (min-width: 640px) {
+  .header-cta { display: inline-flex; }
+  .hero-actions { display: flex; flex-wrap: wrap; }
+  .hero-actions .btn { padding: 0 24px; }
+  .rail { grid-auto-columns: calc((100% - var(--space-4)) / 2); }
+  .review { padding: var(--space-6); }
+  .band-media { aspect-ratio: 16 / 10; }
+  .course--panel { padding: var(--space-8) var(--space-7) 210px; }
+  .footer-grid { grid-template-columns: 1.4fr 1fr 1fr; }
+  .c2 { margin-top: var(--space-8); }
+  .visit-actions { display: flex; flex-wrap: wrap; width: auto; }
+}
+@media (min-width: 768px) {
+  body { padding-bottom: 0; }
+  .action-bar { display: none; }
+  .hero-media { max-width: 560px; }
+  .map { aspect-ratio: 16 / 10; }
+}
+@media (min-width: 960px) {
+  :root { --header-h: 76px; }
+  .menu-btn { display: none; }
+  .nav {
+    position: static; z-index: auto; flex-direction: row; align-items: center; gap: var(--space-6);
+    background: none; padding: 0; overflow: visible; opacity: 1; visibility: visible; transform: none; transition: none;
+  }
+  .nav ul { display: flex; gap: var(--space-6); }
+  .nav-link { font: 400 1rem/1 var(--font-sans); min-height: 44px; align-items: center; border: 0; padding: 0; position: relative; }
+  .nav-link::after { content: ""; position: absolute; left: 0; right: 0; bottom: 8px; height: 1.5px; background: var(--brand); transform: scaleX(0); transform-origin: left; transition: transform .35s var(--ease); }
+  .nav-link:hover::after { transform: scaleX(1); }
+  .nav-link small, .nav-foot { display: none; }
+
+  .hero { padding-top: var(--space-6); }
+  .hero-grid { grid-template-columns: 1.08fr .92fr; gap: var(--space-8); min-height: calc(100svh - var(--header-h) - var(--space-8)); }
+  .hero-media { margin: 0 var(--space-6) 0 0; max-width: none; }
+  .badge { width: 132px; height: 132px; left: -48px; bottom: 48px; }
+
+  .proof-head { grid-template-columns: 1.5fr 1fr; align-items: end; }
+  .score { justify-self: end; }
+  .feature-quote { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: var(--space-7); }
+
+  .course { grid-template-columns: repeat(12, 1fr); gap: var(--space-6); }
+  .course-media { grid-column: 1 / span 7; aspect-ratio: 5 / 4; }
+  .course-body { grid-column: 9 / span 4; }
+  .course--flip .course-media { grid-column: 6 / span 7; grid-row: 1; }
+  .course--flip .course-body { grid-column: 1 / span 4; grid-row: 1; }
+  .course--panel { grid-template-columns: 1fr; padding: var(--space-9) var(--space-8); }
+  .course--panel .course-body { position: relative; }
+  .course--panel .course-body { grid-column: auto; max-width: 560px; }
+  .ripples { width: 620px; height: 620px; right: -120px; bottom: -220px; }
+
+  .band { position: relative; min-height: min(92svh, 820px); align-items: end; overflow: hidden; }
+  .band-media { position: absolute; inset: 0; aspect-ratio: auto; }
+  .band-media img { object-position: 62% 45%; }
+  .band::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--scrim) 0%, rgba(28, 19, 14, .35) 42%, rgba(28, 19, 14, 0) 62%); pointer-events: none; }
+  .band-copy { position: relative; z-index: 1; padding-block: var(--space-9); }
+
+  .approach-grid { grid-template-columns: 5fr 7fr; gap: var(--space-9); }
+  .visit-grid { grid-template-columns: 5fr 7fr; gap: var(--space-8); align-items: center; }
+  .map { aspect-ratio: 5 / 4; }
+  .cta-inner { grid-template-columns: 1fr 1fr; align-items: end; gap: var(--space-8); }
+}
+@media (min-width: 1200px) {
+  .rail { grid-auto-columns: calc((100% - 2 * var(--space-4)) / 3); }
+  .hero-grid { gap: var(--space-9); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html, html:focus-within { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+</style>
+
+<script>
+(function () {
+  var d = document;
+  d.documentElement.classList.add('js');
+  d.addEventListener('DOMContentLoaded', function () {
+    var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* Menu */
+    var header = d.querySelector('.site-header'), btn = d.querySelector('.menu-btn'), nav = d.getElementById('nav');
+    function setMenu(open) {
+      header.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', String(open));
+      btn.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+      d.body.classList.toggle('no-scroll', open);
+    }
+    btn.addEventListener('click', function () { setMenu(btn.getAttribute('aria-expanded') !== 'true'); });
+    nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+    d.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && header.classList.contains('is-open')) { setMenu(false); btn.focus(); }
+    });
+    var desk = matchMedia('(min-width: 960px)');
+    (desk.addEventListener ? desk.addEventListener('change', onDesk) : desk.addListener(onDesk));
+    function onDesk(m) { if (m.matches) setMenu(false); }
+
+    function onScroll() { header.classList.toggle('is-scrolled', window.scrollY > 8); }
+    addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+    /* Reveal on scroll */
+    var els = d.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && !reduce) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } });
+      }, { rootMargin: '0px 0px -6% 0px', threshold: 0.1 });
+      els.forEach(function (el) { io.observe(el); });
+    } else { els.forEach(function (el) { el.classList.add('is-in'); }); }
+
+    /* Review rail */
+    var rail = d.querySelector('.rail'), prev = d.querySelector('[data-rail="-1"]'), next = d.querySelector('[data-rail="1"]');
+    function railState() {
+      var max = rail.scrollWidth - rail.clientWidth - 2;
+      prev.disabled = rail.scrollLeft <= 2;
+      next.disabled = rail.scrollLeft >= max;
+    }
+    [prev, next].forEach(function (b) {
+      b.addEventListener('click', function () {
+        var card = rail.querySelector('.review');
+        var step = card.getBoundingClientRect().width + parseFloat(getComputedStyle(rail).columnGap || 16);
+        rail.scrollBy({ left: step * Number(b.getAttribute('data-rail')), behavior: reduce ? 'auto' : 'smooth' });
+      });
+    });
+    rail.addEventListener('scroll', railState, { passive: true });
+    addEventListener('resize', railState); railState();
+
+    /* Lightbox */
+    var dlg = d.getElementById('lightbox'), lbImg = d.getElementById('lb-img'), lbCap = d.getElementById('lb-cap');
+    var items = [].slice.call(d.querySelectorAll('[data-lb]')), cur = 0;
+    function show(i) {
+      cur = (i + items.length) % items.length;
+      var im = items[cur].querySelector('img');
+      lbImg.src = im.getAttribute('src'); lbImg.alt = im.alt; lbCap.textContent = im.alt;
+    }
+    items.forEach(function (it, i) {
+      it.addEventListener('click', function () {
+        show(i);
+        if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
+        d.body.classList.add('no-scroll');
+      });
+    });
+    function closeLb() { if (dlg.open) { dlg.close ? dlg.close() : dlg.removeAttribute('open'); } }
+    d.querySelector('.lb-prev').addEventListener('click', function () { show(cur - 1); });
+    d.querySelector('.lb-next').addEventListener('click', function () { show(cur + 1); });
+    d.querySelector('.lb-close').addEventListener('click', closeLb);
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) closeLb(); });
+    dlg.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') show(cur - 1);
+      if (e.key === 'ArrowRight') show(cur + 1);
+    });
+    dlg.addEventListener('close', function () { d.body.classList.remove('no-scroll'); items[cur].focus(); });
+
+    /* Year */
+    d.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
+  });
+})();
+</script>
+<!--sf:preview--><meta name="robots" content="noindex, nofollow"><!--/sf:preview-->
+<!--sf:og--><meta property="og:image" content="https://celia-meije-chambery.aymenjallouli.dev/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:url" content="https://celia-meije-chambery.aymenjallouli.dev/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://celia-meije-chambery.aymenjallouli.dev/og.jpg"><!--/sf:og-->
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.53L12 17.5l-5.87 3.07 1.12-6.53L2.5 9.41l6.56-.95L12 2.5z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-sms" viewBox="0 0 24 24"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.55L3 21l1.45-5.6A8.5 8.5 0 1 1 21 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></symbol>
+  <symbol id="i-nav" viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-zoom" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="wordmark" href="#top" aria-label="Célia Meije, retour en haut de page">
+      <span class="mono" aria-hidden="true">CM</span>
+      <span>Célia <em>Meije</em></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <ul>
+        <li><a class="nav-link" href="#avis"><small>01</small>Avis</a></li>
+        <li><a class="nav-link" href="#cours"><small>02</small>Cours</a></li>
+        <li><a class="nav-link" href="#approche"><small>03</small>Approche</a></li>
+        <li><a class="nav-link" href="#adresse"><small>04</small>Adresse</a></li>
+        <li><a class="nav-link" href="#contact"><small>05</small>Contact</a></li>
+      </ul>
+      <div class="nav-foot">
+        <a class="btn btn--brand" href="tel:+33667343743"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Appeler Célia</a>
+        <a class="btn btn--ghost" href="sms:+33667343743?&amp;body=Bonjour%20C%C3%A9lia%2C%20je%20souhaiterais%20avoir%20des%20informations%20sur%20vos%20cours%20de%20yoga.%20Merci."><svg class="i" aria-hidden="true"><use href="#i-sms"/></svg>Envoyer un SMS</a>
+      </div>
+    </nav>
+    <a class="btn btn--brand header-cta" href="tel:+33667343743"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>06 67 34 37 43</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Professeure de yoga · Chambéry</p>
+        <h1 class="hero-title" id="hero-title"><span>Célia</span> <em>Meije</em></h1>
+        <p class="hero-promise">Une bulle hors du temps, <br>chaque semaine, à&nbsp;Chambéry.</p>
+        <p class="hero-sub">Yoga Vinyasa, Yin Yoga et yoga prénatal, adaptés à chaque corps. On en ressort apaisé, dans la tête comme dans le corps.</p>
+        <a class="rating-chip" href="https://www.google.com/maps/place/?q=place_id:ChIJa52dz4upi0cR1ZB2mP7RVms" target="_blank" rel="noopener" aria-label="Noté 5,0 sur 5 sur Google, 15 avis. Voir les avis">
+          <span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+          <span>5,0 <span class="sep">·</span> 15 avis Google</span>
+        </a>
+        <div class="hero-actions">
+          <a class="btn btn--brand" href="tel:+33667343743"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Appeler</a>
+          <a class="btn btn--ghost" href="sms:+33667343743?&amp;body=Bonjour%20C%C3%A9lia%2C%20je%20souhaiterais%20avoir%20des%20informations%20sur%20vos%20cours%20de%20yoga.%20Merci.">Envoyer un SMS</a>
+        </div>
+      </div>
+
+      <figure class="hero-media">
+        <div class="hero-sun" aria-hidden="true"></div>
+        <div class="hero-frame">
+          <img src="assets/photos/photo-01.jpg" width="1600" height="1060" fetchpriority="high" alt="Célia Meije, souriante, assise en posture du papillon sur son tapis devant un mur de bois clair">
+        </div>
+        <div class="badge" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <defs><path id="badge-path" d="M60,60 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0"/></defs>
+            <text><textPath href="#badge-path" textLength="280" lengthAdjust="spacing">VINYASA · YIN YOGA · YOGA PRÉNATAL ·</textPath></text>
+          </svg>
+          <span class="badge-dot"></span>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section class="section proof" id="avis" aria-labelledby="avis-title">
+    <div class="container">
+      <div class="proof-head">
+        <div class="reveal">
+          <p class="eyebrow eyebrow--light">Avis Google</p>
+          <h2 id="avis-title">Le mot qui revient le plus dans leurs avis&nbsp;: <em>bienveillance</em>.</h2>
+        </div>
+        <div class="score reveal reveal-d1">
+          <div class="score-row">
+            <span class="score-num">5,0</span>
+            <div>
+              <span class="stars" aria-label="5 étoiles sur 5"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+              <p class="score-count">sur 15 avis Google</p>
+            </div>
+          </div>
+          <a class="score-link" href="https://www.google.com/maps/place/?q=place_id:ChIJa52dz4upi0cR1ZB2mP7RVms" target="_blank" rel="noopener">Voir les 15 avis sur Google <svg class="i" aria-hidden="true"><use href="#i-out"/></svg></a>
+        </div>
+      </div>
+
+      <blockquote class="feature-quote reveal">
+        <p>«&nbsp;La voix de Célia apaise, ses explications éclairent, sa <mark>bienveillance</mark> enveloppe.&nbsp;»</p>
+        <footer>
+          <span class="stars" aria-label="5 étoiles sur 5"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+          <span>Raphaëlle P., mai 2025</span>
+        </footer>
+      </blockquote>
+
+      <div class="rail-wrap reveal">
+        <div class="rail-top">
+          <h3>Leurs mots</h3>
+          <div class="rail-btns">
+            <button class="rail-btn" type="button" data-rail="-1" aria-label="Avis précédent"><svg class="i" aria-hidden="true"><use href="#i-left"/></svg></button>
+            <button class="rail-btn" type="button" data-rail="1" aria-label="Avis suivant"><svg class="i" aria-hidden="true"><use href="#i-right"/></svg></button>
+          </div>
+        </div>
+        <div class="rail" tabindex="0" role="region" aria-label="Avis Google, faire défiler horizontalement">
+          <article class="review">
+            <span class="stars" aria-label="5 étoiles sur 5"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+            <p class="review-text">«&nbsp;… Célia est à l’écoute des différents profils du groupe et adapte son enseignement aux besoins de chacun.e. Sa bienveillance et son sourire font autant de bien que la pratique qu’elle propose. On ressort apaisé.e de chaque séance (dans la tête et dans le corps). …&nbsp;»</p>
+            <footer class="review-meta"><span class="review-author">Virginie K.</span><span class="review-date">Septembre 2024 · Google</span></footer>
+          </article>
+          <article class="review">
+            <span class="stars" aria-label="5 étoiles sur 5"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+            <p class="review-text">«&nbsp;Je prends des cours de Yoga avec Célia depuis 2 ans. Les bénéfices de cette pratique sont pour moi, outre le fait de passer un bon moment, le renforcement du corps, de l'esprit, et de l'équilibre en général. Les postures, les flow dynamiques de Vinyasa, les respirations, sont accompagnés des informations judicieuses et de la bonne humeur de Célia…&nbsp;»</p>
+            <footer class="review-meta"><span class="review-author">karine B.</span><span class="review-date">Juin 2025 · Google</span></footer>
+          </article>
+          <article class="review">
+            <span class="stars" aria-label="5 étoiles sur 5"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+            <p class="review-text">«&nbsp;Cela fait maintenant 2 ans que je pratique le yoga guide par Celia a La MJC de Chambéry. Les cours sont tops, Celia est bienveillante et à l'écoute permettant de créer un cadre chaleureux et motivant ou chacun progresse à son rythme en accord avec son ressentie et son corps…&nbsp;»</p>
+            <footer class="review-meta"><span class="review-author">Margaux G.</span><span class="review-date">Juin 2025 · Google</span></footer>
+          </article>
+          <article class="review">
+            <span class="stars" aria-label="5 étoiles sur 5"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+            <p class="review-text">«&nbsp;Voilà deux ans que je savoure cette bulle hors du temps chaque semaine. La voix de Célia apaise, ses explications éclairent, sa bienveillance enveloppe. On ressort à la fois ancrée et légère…&nbsp;»</p>
+            <footer class="review-meta"><span class="review-author">Raphaëlle P.</span><span class="review-date">Mai 2025 · Google</span></footer>
+          </article>
+          <article class="review">
+            <span class="stars" aria-label="5 étoiles sur 5"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+            <p class="review-text">«&nbsp;Si tu veux voyager et être accueillis avec douceur, Célia est la prof parfaite pour faire du Yoga. Sa douceur t'accompagneras du début à la fin du cours avec bienveillance et amour. Merci&nbsp;»</p>
+            <footer class="review-meta"><span class="review-author">Morgane A.</span><span class="review-date">Septembre 2023 · Google</span></footer>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section class="section courses" id="cours" aria-labelledby="cours-title">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">Les cours</p>
+        <h2 id="cours-title">Trois pratiques, un même fil&nbsp;: la respiration.</h2>
+        <p class="section-lede">Du flow qui met en mouvement au sol qui dépose. Pour les créneaux et les lieux, un appel ou un SMS à Célia suffit.</p>
+      </header>
+
+      <div class="courses-list">
+        <article class="course">
+          <div class="course-media reveal">
+            <img src="assets/photos/photo-03.jpg" width="1600" height="1067" loading="lazy" decoding="async" alt="Un grand groupe en fente basse, bras levés vers le plafond, pendant un cours de yoga">
+          </div>
+          <div class="course-body reveal reveal-d1">
+            <span class="course-num" aria-hidden="true">01</span>
+            <h3>Yoga Vinyasa</h3>
+            <p class="course-tag">Dynamique · en mouvement</p>
+            <p class="course-text">Des postures qui s’enchaînent au rythme du souffle. C’est le cours dont ses élèves parlent le plus&nbsp;: dynamique, et chacun y avance à son rythme.</p>
+            <blockquote class="mini-quote">«&nbsp;une forme plutôt dynamique de la pratique que j’ai pris plaisir à découvrir&nbsp;»<cite>Virginie K., avis Google</cite></blockquote>
+            <a class="link-arrow" href="sms:+33667343743?&amp;body=Bonjour%20C%C3%A9lia%2C%20je%20souhaiterais%20avoir%20des%20informations%20sur%20vos%20cours%20de%20Yoga%20Vinyasa.%20Merci.">Demander les créneaux <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="course course--flip">
+          <div class="course-media reveal">
+            <img src="assets/photos/photo-07.jpg" width="1600" height="1067" loading="lazy" decoding="async" alt="Célia allongée au sol, jambes contre le mur de bois et bassin posé sur un coussin bordeaux" style="object-position:38% 50%">
+          </div>
+          <div class="course-body reveal reveal-d1">
+            <span class="course-num" aria-hidden="true">02</span>
+            <h3>Yin Yoga</h3>
+            <p class="course-tag">Lent · au sol</p>
+            <p class="course-text">Des postures au sol, tenues plusieurs minutes, souvent avec un coussin pour se laisser porter. Le contrepoint lent du vinyasa&nbsp;: on relâche, on respire, on prend son temps.</p>
+            <a class="link-arrow" href="sms:+33667343743?&amp;body=Bonjour%20C%C3%A9lia%2C%20je%20souhaiterais%20avoir%20des%20informations%20sur%20vos%20cours%20de%20Yin%20Yoga.%20Merci.">Demander les créneaux <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="course course--panel reveal">
+          <svg class="ripples" viewBox="0 0 400 400" aria-hidden="true">
+            <circle class="core" cx="200" cy="200" r="46"/>
+            <circle cx="200" cy="200" r="78"/><circle cx="200" cy="200" r="110"/><circle cx="200" cy="200" r="142"/><circle cx="200" cy="200" r="174"/>
+          </svg>
+          <div class="course-body">
+            <span class="course-num" aria-hidden="true">03</span>
+            <h3>Yoga prénatal</h3>
+            <p class="course-tag">Pendant la grossesse</p>
+            <p class="course-text">Un cours pensé pour la grossesse&nbsp;: des postures adaptées, la respiration, et un moment calme rien que pour soi.</p>
+            <a class="link-arrow" href="sms:+33667343743?&amp;body=Bonjour%20C%C3%A9lia%2C%20je%20souhaiterais%20avoir%20des%20informations%20sur%20vos%20cours%20de%20yoga%20pr%C3%A9natal.%20Merci.">Demander les créneaux <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BAND: one oversized moment -->
+  <section class="band" aria-labelledby="band-title">
+    <div class="band-media">
+      <img src="assets/photos/photo-06.jpg" width="1600" height="1067" loading="lazy" decoding="async" alt="Célia en posture de yoga sur un pré, une jambe tendue vers le ciel, face aux sommets enneigés">
+    </div>
+    <div class="container band-copy reveal">
+      <p class="eyebrow eyebrow--light" id="band-title">Stages</p>
+      <blockquote class="band-quote">
+        <p>«&nbsp;…le stage là-haut dans le massif des Bauges, une bulle de sérénité en plein cœur de l’hiver.&nbsp;»</p>
+        <footer>Virginie K., avis Google</footer>
+      </blockquote>
+      <a class="btn btn--light" href="sms:+33667343743?&amp;body=Bonjour%20C%C3%A9lia%2C%20je%20souhaiterais%20conna%C3%AEtre%20les%20dates%20de%20vos%20prochains%20stages.%20Merci.">Se renseigner sur les stages</a>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section class="section approach" id="approche" aria-labelledby="approche-title">
+    <div class="container approach-grid">
+      <div class="approach-copy reveal">
+        <p class="eyebrow">L’approche</p>
+        <h2 id="approche-title">Un même cours, des corps tous différents.</h2>
+        <p>Dans les avis, la même idée revient&nbsp;: Célia est à l’écoute des différents profils du groupe et adapte sa séance aux besoins de chacun. Les postures et les respirations s’accompagnent d’explications claires et de beaucoup de bonne humeur.</p>
+        <p>Chacun progresse à son rythme, en accord avec son corps. Et l’on reste&nbsp;: trois des avis parlent de deux ans de cours avec elle.</p>
+      </div>
+      <div class="collage">
+        <button class="collage-item c1 reveal" type="button" data-lb aria-label="Agrandir la photo : Célia au sol face à une élève">
+          <img src="assets/photos/photo-02.jpg" width="1067" height="1600" loading="lazy" decoding="async" alt="Célia allongée au sol, à hauteur de tapis, observe une élève pendant le cours">
+          <span class="zoom" aria-hidden="true"><svg class="i"><use href="#i-zoom"/></svg></span>
+        </button>
+        <button class="collage-item c2 reveal reveal-d1" type="button" data-lb aria-label="Agrandir la photo : Célia guide un groupe">
+          <img src="assets/photos/photo-04.jpg" width="1067" height="1600" loading="lazy" decoding="async" alt="Célia guide un groupe en fente, au fond d’une salle au parquet clair">
+          <span class="zoom" aria-hidden="true"><svg class="i"><use href="#i-zoom"/></svg></span>
+        </button>
+        <button class="collage-item c3 reveal" type="button" data-lb aria-label="Agrandir la photo : Célia montre un mouvement">
+          <img src="assets/photos/photo-05.jpg" width="1600" height="1067" loading="lazy" decoding="async" alt="Célia, au sol, bras tendus, montre le mouvement à un groupe en pleine séance">
+          <span class="zoom" aria-hidden="true"><svg class="i"><use href="#i-zoom"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section class="section visit" id="adresse" aria-labelledby="adresse-title">
+    <div class="container visit-grid">
+      <div class="visit-copy reveal">
+        <p class="eyebrow">Adresse</p>
+        <h2 id="adresse-title">Faubourg Montmélian, Chambéry.</h2>
+        <address>Célia Meije<br>150 Fbg Montmélian<br>73000 Chambéry</address>
+        <p class="visit-note">Pour connaître les horaires et le lieu de votre cours, demandez directement à Célia, par téléphone ou par SMS.</p>
+        <div class="visit-actions">
+          <a class="btn btn--brand" href="https://www.google.com/maps/dir/?api=1&amp;destination=C%C3%A9lia%20Meije%2C%20150%20Fbg%20Montm%C3%A9lian%2C%2073000%20Chamb%C3%A9ry" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-nav"/></svg>Itinéraire</a>
+          <a class="btn btn--ghost" href="tel:+33667343743"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>06 67 34 37 43</a>
+        </div>
+      </div>
+      <div class="map reveal reveal-d1">
+        <div class="map-fallback">
+          <svg class="i" aria-hidden="true" style="margin:0 auto;width:28px;height:28px"><use href="#i-pin"/></svg>
+          <p>150 Fbg Montmélian, Chambéry</p>
+          <a class="link-arrow" href="https://www.google.com/maps/place/?q=place_id:ChIJa52dz4upi0cR1ZB2mP7RVms" target="_blank" rel="noopener">Ouvrir dans Google Maps</a>
+        </div>
+        <iframe src="https://www.google.com/maps?q=C%C3%A9lia%20Meije%2C%20150%20Fbg%20Montm%C3%A9lian%2C%2073000%20Chamb%C3%A9ry&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Carte : Célia Meije, 150 Fbg Montmélian, 73000 Chambéry"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section cta" id="contact" aria-labelledby="contact-title">
+    <div class="container cta-inner">
+      <div class="reveal">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Votre premier cours commence par un message.</h2>
+      </div>
+      <div class="cta-list reveal reveal-d1">
+        <a class="cta-line" href="tel:+33667343743">
+          <span class="cta-label">Téléphone</span>
+          <span class="cta-value">06 67 34 37 43</span>
+          <span class="cta-arrow" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a class="cta-line" href="sms:+33667343743?&amp;body=Bonjour%20C%C3%A9lia%2C%20je%20souhaiterais%20avoir%20des%20informations%20sur%20vos%20cours%20de%20yoga.%20Merci.">
+          <span class="cta-label">SMS</span>
+          <span class="cta-value">Écrire à Célia</span>
+          <span class="cta-arrow" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span>
+        </a>
+        <a class="cta-line" href="https://www.instagram.com/celiameije/" target="_blank" rel="noopener">
+          <span class="cta-label">Instagram</span>
+          <span class="cta-value">@celiameije</span>
+          <span class="cta-arrow" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="wordmark" href="#top" aria-label="Célia Meije, retour en haut de page"><span class="mono" aria-hidden="true">CM</span><span>Célia <em>Meije</em></span></a>
+      <p class="footer-about">Professeure de yoga à Chambéry. Yoga Vinyasa, Yin Yoga et yoga prénatal.</p>
+    </div>
+    <div>
+      <p class="footer-title">Navigation</p>
+      <ul class="footer-links">
+        <li><a href="#avis">Avis</a></li>
+        <li><a href="#cours">Cours</a></li>
+        <li><a href="#approche">Approche</a></li>
+        <li><a href="#adresse">Adresse</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-title">Coordonnées</p>
+      <address>150 Fbg Montmélian<br>73000 Chambéry</address>
+      <ul class="footer-links">
+        <li><a href="tel:+33667343743"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>06 67 34 37 43</a></li>
+        <li><a href="https://www.instagram.com/celiameije/" target="_blank" rel="noopener" aria-label="Instagram de Célia Meije"><svg class="i" aria-hidden="true"><use href="#i-insta"/></svg>@celiameije</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© <span data-year></span> Célia Meije · Professeure de yoga à Chambéry</p>
+      <a href="#top">Retour en haut</a>
+    </div>
+  </div>
+</footer>
+
+<nav class="action-bar" aria-label="Contact rapide">
+  <a href="tel:+33667343743"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>Appeler</a>
+  <a href="sms:+33667343743?&amp;body=Bonjour%20C%C3%A9lia%2C%20je%20souhaiterais%20avoir%20des%20informations%20sur%20vos%20cours%20de%20yoga.%20Merci."><svg class="i" aria-hidden="true"><use href="#i-sms"/></svg>SMS</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=C%C3%A9lia%20Meije%2C%20150%20Fbg%20Montm%C3%A9lian%2C%2073000%20Chamb%C3%A9ry" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-nav"/></svg>Itinéraire</a>
+</nav>
+
+<dialog class="lightbox" id="lightbox" aria-label="Photo agrandie">
+  <figure>
+    <img id="lb-img" alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+  <button class="lb-btn lb-close" type="button" aria-label="Fermer"><svg class="i" aria-hidden="true"><use href="#i-close"/></svg></button>
+  <button class="lb-btn lb-prev" type="button" aria-label="Photo précédente"><svg class="i" aria-hidden="true"><use href="#i-left"/></svg></button>
+  <button class="lb-btn lb-next" type="button" aria-label="Photo suivante"><svg class="i" aria-hidden="true"><use href="#i-right"/></svg></button>
+</dialog>
+<!--sf:preview--><div style="padding:18px 16px;font:13px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;text-align:center;background:#0f0f10;color:#a3a3a8">Aperçu réalisé par Aymen Jallouli pour Célia Meije : ce site n'est pas encore le site officiel de l'établissement.</div><!--/sf:preview-->
+<!--sf:track--><script>(function(){try{var q=new URLSearchParams(location.search),r=q.get('r')||sessionStorage.getItem('sf_r');if(!r)return;sessionStorage.setItem('sf_r',r);navigator.sendBeacon("https://track.aymenjallouli.dev/t"+'?r='+encodeURIComponent(r)+'&p='+encodeURIComponent(location.pathname));}catch(e){}})();</script><!--/sf:track-->
+</body>
+</html>
